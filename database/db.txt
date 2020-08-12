@@ -1,0 +1,24 @@
+AUG ---------------------------->  12
+
+CREATE TABLE `customer` (
+  `id` int(11) NOT NULL,
+  `name` varchar(155) NOT NULL,
+  `role` varchar(55) NOT NULL,
+  `mobile` varchar(55) NOT NULL,
+  `college` varchar(255) NOT NULL,
+  `state` varchar(155) NOT NULL,
+  `district` varchar(155) NOT NULL,
+  `email` varchar(255) NOT NULL,  
+  `imei` varchar(255) NOT NULL,
+  `profileUrl` varchar(255) NOT NULL, 
+  `firebaseToken` varchar(255) NOT NULL,  
+  `deviceToken` varchar(155) NOT NULL,  
+  `created_at` datetime NOT NULL,
+  `updated_at` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`id`);
+  ALTER TABLE `customer`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
+
+ALTER TABLE `customer` ADD `device_latitude` VARCHAR(200) NOT NULL AFTER `profileUrl`, ADD `device_longitude` VARCHAR(200) NOT NULL AFTER `device_latitude`;  
